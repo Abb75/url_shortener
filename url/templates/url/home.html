@@ -95,13 +95,13 @@
     {% if new_url %}
     <div class="short-url">
         <p>{{ message }}</p>
-        URL raccourcie: <a href="{% url 'redirect_view' short_url=new_url %}" target="_blank">http://127.0.0.1:8000/{{ new_url }}</a>
+        URL raccourcie: <a href="{% url 'redirect_view' short_url=new_url %}" target="_blank">https://linksqueeze.vercel.app/{{ new_url }}</a>
     </div>
     {% endif %}
     {% if short_url %}
     <div class="short-url">
         <p>{{ message }}</p>
-        URL raccourcie: <a href="{% url 'redirect_view' short_url=short_url %}" target="_blank">http://127.0.0.1:8000/{{ short_url }}</a>
+        URL raccourcie: <a href="{% url 'redirect_view' short_url=short_url %}" target="_blank">https://linksqueeze.vercel.app/{{ short_url }}</a>
     </div>
     {% endif %}
 </body>
