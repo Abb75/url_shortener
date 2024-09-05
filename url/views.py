@@ -25,7 +25,6 @@ def url_view(request):
 
 
 
-
 def handle_existing_url(request, long_url):
     queryset = get_url(long_url)
     context = {

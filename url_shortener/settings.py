@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-
+import dj_database_url
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1','.vercel.app']
 
 
 # Application definition
@@ -82,10 +82,18 @@ WSGI_APPLICATION = 'url_shortener.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',  # Le moteur de base de données
+        'NAME': 'postgres',  # Le nom de votre base de données
+        'USER': 'postgres.zswpjnzvomeqdtbgyxqa',  # L'utilisateur fourni par Supabase
+        'PASSWORD': 'Muaythailove75!!',  # Le mot de passe de l'utilisateur PostgreSQL
+        'HOST': 'aws-0-eu-west-3.pooler.supabase.com',  # L'adresse de l'hôte (Supabase)
+        'PORT': '6543',  # Le port de la base de données PostgreSQL (6543 dans votre cas)
     }
 }
+
+print(DATABASES)
+
+
 
 
 # Password validation
