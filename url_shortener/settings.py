@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'url_shortener.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # Le moteur de base de données
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',  # Le moteur de base de données
         'NAME': 'postgres',  # Le nom de votre base de données
         'USER': 'postgres.zswpjnzvomeqdtbgyxqa',  # L'utilisateur fourni par Supabase
         'PASSWORD': 'Muaythailove75!!',  # Le mot de passe de l'utilisateur PostgreSQL
